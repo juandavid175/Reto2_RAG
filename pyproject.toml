@@ -1,0 +1,22 @@
+[project]
+name = "memoria-rag"
+version = "0.1.0"
+description = "RAG sobre una sola página PDF con ChromaDB y Ollama, Gemini o Anthropic"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "anthropic>=2.3.0",
+    "chromadb>=1.5.9",
+    "google-genai>=2.33.0",
+    "httpx>=0.28.1",
+    "pypdf>=6.21.4",
+    "python-dotenv>=1.2.4",
+    "sentence-transformers>=6.2.0",
+]
+
+[project.scripts]
+memoria-rag = "memoria_rag:main"
+
+[build-system]
+requires = ["uv_build>=0.13.6,<0.14.0"]
+build-backend = "uv_build"
